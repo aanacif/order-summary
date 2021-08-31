@@ -1,0 +1,125 @@
+@use '../util' as *;
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.card {
+  &-container {
+    background-color: #fff;
+    max-width: rem(450);
+    height: 44rem;
+    margin: 5rem auto;
+    border-radius: 25px;
+    font-family: var(--font-body);
+    @include breakpoint-down(small) {
+      margin: 4rem 1.5rem;
+      height: 42rem;
+    }
+  }
+  &-image {
+    background-image: url(../../assets/illustration-hero.svg);
+    height: 220px; //
+    border-radius: 25px 25px 0 0px;
+    overflow: hidden;
+  }
+  &-header {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--darkblue);
+    @include breakpoint-down(small) {
+      font-size: 1.5rem;
+    }
+  }
+  &-description {
+    text-align: center;
+    margin: 0 4rem;
+    color: var(--darkblue);
+    opacity: 0.6;
+    @include breakpoint-down(small) {
+      margin: 0 1.6rem;
+    }
+  }
+  &-plan {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 3rem;
+    height: 7rem;
+    align-items: center;
+    background-color: var(--paleblue);
+    border-radius: 10px;
+    @include breakpoint-down(small) {
+      margin: 2rem 1.5rem;
+    }
+
+    &-details {
+      font-size: 1.4rem;
+      @include breakpoint-down(small) {
+        font-size: 1.2rem;
+      }
+
+      &-freq {
+        font-weight: 700;
+      }
+      &-price {
+        color: var(--darkblue);
+        opacity: 0.6;
+        font-weight: 500;
+      }
+    }
+    & a {
+      font-size: 1rem;
+      color: var(--brightblue);
+      text-decoration: underline;
+      font-weight: 700;
+      @include breakpoint-down(small) {
+        font-size: 0.9rem;
+      }
+      &:hover {
+        opacity: 0.6;
+        text-decoration: none;
+      }
+    }
+  }
+  &-button {
+    display: block;
+    margin: 1rem auto;
+
+    padding: 1rem 6rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: var(--font-body);
+    background-color: var(--brightblue);
+    color: #fff;
+    box-shadow: 1px 10px 30px var(--brightblue);
+    cursor: pointer;
+    @include breakpoint-down(small) {
+      margin: 1rem auto;
+
+      padding: 1rem 4rem;
+    }
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  a.card-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    color: var(--darkblue);
+    font-weight: 900;
+    opacity: 0.6;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

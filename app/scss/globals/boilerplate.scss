@@ -1,0 +1,25 @@
+@use 'util' as *;
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221440%22%20height%3D%22437%22%3E%3Cpath%20fill%3D%22%237280a7%22%20fill-rule%3D%22evenodd%22%20d%3D%22M0%20349.974c218.558%20116.035%20460.05%20116.035%20724.475%200s502.933-116.035%20715.525%200V0H0v349.974z%22%2F%3E%3C%2Fsvg%3E);
+  background-color: var(--paleblue);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center top;
+
+  @include breakpoint-down(small) {
+    background-image: none;
+  }
+}
